@@ -1,9 +1,23 @@
 baseurl = "/"
+site_name = "ChrisDev"
 languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
+title = "ChrisDev Hugo"
+[params]
+  description = "ChrisDev starter kit built with ZURB Foundation & Hugo"
+  address= "1 Mountain View Drive"
+  city = "Petit Valley"
+  country = "Trinidad"
+  facebook = "https://facebook.com"
+  twitter = "https://twitter.com"
+  instagram = "https://instagram.com"
+  youtube = "https://youtube.com"
+  email = "lendl.smith@gmail.com"
+  tel = "+1 868 744 2856"
+  googleplus = "112354208488638707199"
+  fbapp_id = "206433049934562"
+  google_analytics_id = "12345678"
 
 # RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
+# See configuration options for more details:
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]

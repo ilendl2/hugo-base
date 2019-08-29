@@ -1,24 +1,30 @@
 {{ define "main" }}
+	<div class="bg-off-white grid-container">
+		<div class="grid-x grid-padding-x grid-padding-y align-center">
+			<div class="medium-8 cell">
+				<center>
+					<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
+				</center>
 
-<div class="ph3 bg-off-white">
-	<div class="center mw6 pv3">
+				{{ .Content }}
 
-		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
-
-		{{ .Content }}
-
-		<div class="flex-ns mb3">
-	        	{{ range .Params.contact_entries }}
-				<div>
-					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<p>{{ .text }}</p>
+				<div class="grid-x grid-padding-x grid-padding-y medium-up-2">
+			    {{ range .Params.contact_entries }}
+				    <div class="cell">
+							<div class="card">
+								<div class="card-section">
+									<center>
+										<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
+										<p>{{ .text }}</p>
+									</center>
+								</div>
+							</div>
+						</div>
+					{{ end }}
 				</div>
-			{{ end }}
+
+				{{ partial "contact-form" . }}
 		</div>
-
-		{{ partial "contact-form" . }}
-
 	</div>
-</div>
 
 {{ end }}

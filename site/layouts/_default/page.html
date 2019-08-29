@@ -1,16 +1,15 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Latest stories") }}
+{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "{{ .Title }}") }}
 
 <div class="grid-container">
-  <ul class="grid-x grid-padding-x grid-padding-y medium-up-2" data-equalizer>
+  <ul class="grid-x grid-padding-x grid-padding-y medium-up-3" data-equalizer>
     {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
       <div class="cell">
         <div class="card" data-equalizer-watch>
           <div class="card-section">
             <a href="{{ .RelPermalink }}">
             	<h2 class="f3 b lh-title mb1 primary">{{ .Title }}</h2>
-            	<p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
             	<p class="mb0">{{ .Description }}</p>
             	<p class="button small">Read more →</p>
             </a>

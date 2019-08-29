@@ -1,0 +1,18 @@
+<header>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li>
+          <a href="/" title="Link to home page">
+            <img src="https://chrisdev.com/static/img/logo.png" alt="{{ .Site.Title }} logo" width="200">
+          </a>
+      	</li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        {{ partial "navigation.html" . }}
+      </ul>
+    </div>
+  </div>
+</header>

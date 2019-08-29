@@ -1,19 +1,17 @@
-<div class="bg-off-white pv4">
-	<div class="ph3 mw7 center">
-
-		<h2 class="f2 b lh-title mb3">Latest stories</h2>
-
-		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range first 4 (where .Data.Pages "Type" "post") }}
-				<div class="ph1-ns w-50-ns flex">
+<div class="bg-off-white grid-container">
+	<div class="grid-x grid-padding-x grid-padding-y">
+		<div class="medium-12 cell">
+			<h2 class="f2 b lh-title mb3">Latest stories</h2>
+		</div>
+		<div class="grid-x grid-padding-x grid-padding-y medium-up-2">
+			{{ range first 4 (where .Data.Pages "Type" "blog") }}
+				<div class="cell">
 					{{ .Render "li" }}
 				</div>
 			{{ end }}
 		</div>
-
-		<div class="tc">
-			<a href="/post" class="btn raise">Read more</a>
+		<div class="medium-12 cell text-center">
+			<a href="/post" class="button">Read more</a>
 		</div>
-
 	</div>
 </div>

@@ -1,53 +1,50 @@
-<footer class="bg-black ph3 pv4 white">
-
-	<div class="mw7 center pt3">
-
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
-
-			{{ partial "newsletter-form" . }}
-
-		</div>
-
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
+<footer class="hide-for-print">
+  <div class="grid-container" style="max-width: 75rem;">
+    <div class="grid-x grid-padding-x grid-padding-y text-center">
+	  	<div id="find-us" class="medium-4 cell">
+	    	<h5><strong>Find Us</strong></h5>
+    		<li><i class="fas fa-map-marker"></i> #{{ .Site.Params.address }}, {{ .Site.Params.city }},</li>
+        <li style="margin-bottom: 15px;">{{ .Site.Params.country }}</li>
 			</div>
 
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
+			<div id="contact-us" class="medium-4 cell">
+				<h5><strong>Contact Us</strong></h5>
+		    <li><i class="fas fa-phone"></i> <a href="tel:{{ .Site.Params.tel }}">{{ .Site.Params.tel }}</a></li>
+		    <li><i class="far fa-envelope"></i> <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
 			</div>
 
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo") }}
-				</ul>
+			<div id="social" class="medium-4 cell">
+				<h5><strong>Follow Us</strong></h5>
+		    <a href="{{ .Site.Params.facebook }}" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+		    <a href="{{ .Site.Params.twitter }}" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+		    <a href="{{ .Site.Params.instagram }}" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+		    <a href="{{ .Site.Params.youtube }}" title="Instagram" target="_blank"><i class="fab fa-youtube"></i></a>
 			</div>
-
 		</div>
 	</div>
 
+  <div class="grid-container">
+  	<div class="grid-x grid-padding-x align-center">
+	  	<div class="medium-9 cell">
+	    	<hr style="border-width: 1px; border-color: #fff; margin: 10px 0;"/>
+	    </div>
+	  </div>
+  </div>
+
+  <div id="copyright">
+		<div class="grid-container">
+    	<div class="grid-x grid-padding-x align-center">
+	    	<div class="medium-10 cell">
+          <center>
+  			    <p style="margin-bottom: 0; font-size: 14px;">Copyright © 2019 {{ .Site.Params.site_name }}. <br class="show-for-small-only">All rights reserved <br class="show-for-small-only">
+  	        	<span class="seperator hide-for-small-only">|</span>
+  	        	<a href="/legal/privacy.html">Privacy Policy</a>
+  	        	<span class="seperator">|</span>
+  	        	<a href="/legal/terms.html">Terms of Use</a>
+  	        </p>
+          </center>
+			  </div>
+			</div>
+		</div>
+	</div>
 </footer>
-
-{{ partial "svg" . }}
-
-<script src="/app.js"></script>
