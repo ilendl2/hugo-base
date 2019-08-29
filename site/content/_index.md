@@ -1,7 +1,7 @@
 ---
 title: ChrisDev Mockup
 subtitle: Support sustainable farming while enjoying a cup
-image: /img/home-jumbotron.jpg
+image: /img/about-direct-sourcing.jpg
 blurb:
   heading: Why ChrisDev?
   text: >-
@@ -24,3 +24,4 @@ values:
     want to turn this around and return the coffee trade to the drink’s
     exhilarating, empowering and unifying nature.
 ---
+
