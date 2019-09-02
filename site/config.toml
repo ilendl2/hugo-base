@@ -1,8 +1,8 @@
 baseurl = "/"
-site_name = "ChrisDev"
 languageCode = "en-us"
 title = "ChrisDev Hugo"
 [params]
+  site_name = "ChrisDev"
   description = "ChrisDev starter kit built with ZURB Foundation & Hugo"
   address= "1 Mountain View Drive"
   city = "Petit Valley"

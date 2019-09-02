@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
-    <link rel="stylesheet" href="/assets/css/app.css">
+
     {{ $stylesheet := .Site.Data.webpack.main }}
     {{ with $stylesheet.css }}
       <link href="{{ relURL . }}" rel="stylesheet">
@@ -35,7 +35,7 @@
 
     {{ partial "footer.html" . }}
 
-    <a href="#" class="scrollup"><img src="/assets/img/top.png" width="30"></i></a>
+    <!--<a href="#" class="scrollup"><img src="/assets/img/top.png" width="30"></i></a>-->
 
     <script src="/assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

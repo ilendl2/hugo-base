@@ -83,5 +83,9 @@
 @import './imports/_debug-children';
 @import './imports/_debug-grid';
 
+footer {background: #f5f3f2;}
+footer li, footer p {font-size: 16px;}
+footer li {list-style: none;}
+
 /* Uncomment out the line below to help debug layout issues */
 /*@import './imports/_debug';*/

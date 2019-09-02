@@ -3,12 +3,14 @@
 		<div class="medium-12 cell">
 			<h2 class="f2 b lh-title mb3">Latest stories</h2>
 		</div>
-		<div class="grid-x grid-padding-x grid-padding-y medium-up-2">
-			{{ range first 4 (where .Data.Pages "Type" "blog") }}
-				<div class="cell">
-					{{ .Render "li" }}
-				</div>
-			{{ end }}
+		<div class="medium-12 cell">
+			<div class="grid-x grid-padding-x grid-padding-y medium-up-2">
+				{{ range first 4 (where .Data.Pages "Type" "blog") }}
+					<div class="cell">
+						{{ .Render "li" }}
+					</div>
+				{{ end }}
+			</div>
 		</div>
 		<div class="medium-12 cell text-center">
 			<a href="/post" class="button">Read more</a>
