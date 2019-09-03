@@ -28,10 +28,10 @@ export default class PostPreview extends React.Component {
         </div>
 
         <div className="bg-grey pad">
-          { image && <img src={ imageUrl }/> }
           <h2>{entry.getIn(["data", "block", "heading"])}</h2>
+          { image && <img src={ imageUrl }/> }
           <p>{entry.getIn(["data", "block", "text"])}</p>
-          <a>{entry.getIn(["data", "block", "button_text"])}</a>
+          <a className="button">{entry.getIn(["data", "block", "button_text"])}</a>
         </div>
     </div>
   }
