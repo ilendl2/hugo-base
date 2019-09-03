@@ -14,10 +14,10 @@ gulp.task("scss", function () {
         .pipe(gulp.dest("src/css"))
 })
 
+// Set watch as default task
+gulp.task("default", ["watch"])
+
 // Watch asset folder for changes
 gulp.task("watch", ["scss"], function () {
     gulp.watch("src/scss/**/*", ["scss"])
 })
-
-// Set watch as default task
-gulp.task("default", ["watch"])

@@ -1,7 +1,3 @@
-@charset 'utf-8';
-
-@import 'building_blocks';
-
 // Colors
 $primary: #ff4400;
 $secondary: #E91E63;
@@ -55,4 +51,30 @@ footer {
 
   #social i {font-size: 25px; margin-right: 8px;}
   .seperator {padding: 0 8px;}
+}
+
+
+// BUILDING BLOCKS
+
+$hero-height: 40vh;
+
+.hero-section {
+  background-size: cover;
+  background-attachment: fixed;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: $white;
+    h1 {background: $primary; border-radius: 5px; padding: 5px 10px; text-shadow: 1px 1px 2px $black; font-weight: 600;}
+    h3 {background: $primary; border-radius: 5px; padding: 5px;}
+  }
+}
+
+#homepage .hero-section {
+   height: 70vh;
+   h1 {background: transparent;}
 }
