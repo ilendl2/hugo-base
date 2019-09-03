@@ -24,10 +24,11 @@ body {
 
 .grid-container {max-width: 70rem;}
 .pad {padding: 30px 0;}
-.card {border: 0; padding: 15px; border-radius: 5px; box-shadow: 1px 1px 10px 1px rgba(0,0,0,.21);}
+.card {border: 0; padding: 20px; border-radius: 5px; box-shadow: 1px 1px 10px 1px rgba(0,0,0,.21);}
 a {color: $primary;}
 a:hover {color: darken($primary, 10%);}
 .button, button {background: $primary; border-radius: 4px;}
+.button:hover, button:hover {background: darken($primary, 10%);}
 .primary {color: $primary;}
 
 .top-bar {

@@ -9,12 +9,10 @@
 			    {{ range .Params.contact_entries }}
 				    <div class="cell">
 							<div class="card">
-								<div class="card-section">
-									<center>
-										<h4 class="primary">{{ .heading }}</h4>
-										<p>{{ .text }}</p>
-									</center>
-								</div>
+								<center>
+									<h4 class="primary">{{ .heading }}</h4>
+									<p>{{ .text }}</p>
+								</center>
 							</div>
 						</div>
 					{{ end }}
