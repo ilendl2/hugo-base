@@ -9,7 +9,6 @@ export default class BlogPreview extends React.Component {
     return <div>
       <h2>{ entry.getIn(["data", "title"])}</h2>
       <p>{ format(entry.getIn(["data", "date"]), "ddd, MMM D, YYYY") }</p>
-      <p>Read in x minutes</p>
       <p>{ entry.getIn(["data", "description"]) }</p>
       { image && <img src={ image } alt={ entry.getIn(["data", "title"])} /> }
       { widgetFor("body") }
