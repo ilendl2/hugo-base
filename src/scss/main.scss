@@ -23,7 +23,7 @@ body {
   .bg-grey {background: $light-gray;}
   .bg-off-white{background: $off-white;}
   .pad {padding: 10px;}
-  img {max-width: 100%;}
+  img {max-width: 100%; border-radius: 5px;}
   .button {padding: 5px 8px;}
 }
 
