@@ -7,6 +7,7 @@ export default class PostPreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
     let image = getAsset(entry.getIn(["data", "image"]));
+    let imageUrl = getAsset(entry.getIn(["data", "block", "imageUrl"]));
 
     // Bit of a nasty hack to make relative paths work as expected as a background image here
     if (image && !image.fileObj) {
