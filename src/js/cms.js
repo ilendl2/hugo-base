@@ -10,6 +10,6 @@ import ContactPreview from "./cms-preview-templates/contact";
 
 CMS.registerPreviewStyle(styles, { raw: true });
 CMS.registerPreviewTemplate("home", HomePreview);
-CMS.registerPreviewTemplate("blog", PostPreview);
+CMS.registerPreviewTemplate("blog", BlogPreview);
 CMS.registerPreviewTemplate("contact", ContactPreview);
 CMS.init();
