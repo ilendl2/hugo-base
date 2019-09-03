@@ -11,9 +11,9 @@ export default class AboutPreview extends React.Component {
         image = window.parent.location.protocol + "//" + window.parent.location.host + image;
     }
 
-    <Jumbotron image={image} title={entry.getIn(["data", "title"])}/>
-
     return <div>
+      <Jumbotron image={image} title={entry.getIn(["data", "title"])}/>
+      
       <h2>{ entry.getIn(["data", "title"])}</h2>
       { widgetFor("body") }
     </div>;
