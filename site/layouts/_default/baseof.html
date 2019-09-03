@@ -11,10 +11,8 @@
 
     {{ partial "head.html" . }}
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
 
     {{ $stylesheet := .Site.Data.webpack.main }}
@@ -35,23 +33,33 @@
 
     {{ partial "footer.html" . }}
 
-    <!--<a href="#" class="scrollup"><img src="/assets/img/top.png" width="30"></i></a>-->
+    <a href="#" class="scrollup"><img src="/img/top.png" width="30"></i></a>
 
-    <script src="/assets/js/app.js"></script>
+    {{ $script := .Site.Data.webpack.main }}
+    {{ with $script.js }}
+      <script src="{{ relURL . }}"></script>
+    {{ end }}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slippry/1.4.0/slippry.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
+      $(document).ready(function(){
+       $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+          } else {
+            $('.scrollup').fadeOut();
           }
         });
-      }
+
+        $('.scrollup').click(function () {
+          $("html, body").animate({
+            scrollTop: 0
+          }, 600);
+          return false;
+        });
+      });
     </script>
   </body>
 </html>
