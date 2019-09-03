@@ -1,10 +1,12 @@
 {{ define "main" }}
 
-  {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
-
-  {{ partial "short-text" .Params.blurb}}
+  <div id="homepage">
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+  </div>
 
   {{ partial "intro" .Params }}
+
+  {{ partial "short-text" .Params.blurb}}
 
   {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
 

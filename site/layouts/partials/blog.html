@@ -1,19 +1,18 @@
-<div class="bg-off-white grid-container">
-	<div class="grid-x grid-padding-x grid-padding-y">
-		<div class="medium-12 cell">
-			<h2 class="f2 b lh-title mb3">Latest stories</h2>
-		</div>
-		<div class="medium-12 cell">
-			<div class="grid-x grid-padding-x grid-padding-y medium-up-2">
-				{{ range first 4 (where .Data.Pages "Type" "blog") }}
-					<div class="cell">
-						{{ .Render "li" }}
-					</div>
-				{{ end }}
+<div id="bg-off-white">
+  <div class="grid-container pad">
+		<div class="grid-x grid-padding-x grid-padding-y">
+			<div class="medium-12 cell">
+				<center><h2><strong>Our Blog</strong></h2></center>
 			</div>
-		</div>
-		<div class="medium-12 cell text-center">
-			<a href="/post" class="button">Read more</a>
+			<div class="medium-12 cell">
+				<div class="grid-x grid-padding-x grid-padding-y medium-up-2">
+					{{ range first 4 (where .Data.Pages "Type" "blog") }}
+						<div class="cell">
+							{{ .Render "li" }}
+						</div>
+					{{ end }}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

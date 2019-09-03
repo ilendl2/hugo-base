@@ -1,0 +1,53 @@
+@charset 'utf-8';
+
+@import 'building_blocks';
+
+// Colors
+$primary: #3e50b4;
+$secondary: #E91E63;
+$success: #3ADB76;
+$warning: #FF9800;
+$alert: #F44336;
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #2d2d2d;
+$emperor: #777777;
+$black: #0a0a0a;
+$white: #fefefe;
+$off-white: #f8f8f8;
+
+body, html { overflow-x:hidden; }
+
+body {
+    background: $white;
+    font-size: 19px;
+}
+
+#bg-grey {background: $light-gray;}
+#bg-off-white{background: $off-white;}
+
+.grid-container {max-width: 70rem;}
+.pad {padding: 30px 0;}
+.card {border: 0; padding: 15px; border-radius: 5px; box-shadow: 1px 1px 10px 1px rgba(0,0,0,.21);}
+a {color: $primary;}
+a:hover {color: darken($primary, 10%);}
+.primary {color: $primary;}
+
+#media-block {
+  img {border-radius: 8px;}
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: $dark-gray;
+
+  h5 {color: $white;}
+  p, li {color: $white; margin-bottom: 0; font-size: 15px;}
+  li {list-style: none;}
+  ul {margin-left: 0;}
+  a, a:hover {color: $white;}
+
+  #social i {font-size: 25px; margin-right: 8px;}
+  .seperator {padding: 0 8px;}
+}

@@ -1,0 +1,24 @@
+// Colors
+$black: #0a0a0a;
+$white: #fefefe;
+
+$hero-height: 40vh;
+
+.hero-section {
+  background-size: cover;
+  background-attachment: fixed;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: $white;
+    text-shadow: 1px 1px 2px $black;
+  }
+}
+
+#homepage .hero-section {
+   height: 70vh;
+}

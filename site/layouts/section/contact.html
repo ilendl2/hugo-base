@@ -1,10 +1,7 @@
 {{ define "main" }}
-	<div class="bg-off-white grid-container">
+	<div class="bg-off-white grid-container pad">
 		<div class="grid-x grid-padding-x grid-padding-y align-center">
 			<div class="medium-8 cell">
-				<center>
-					<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
-				</center>
 
 				{{ .Content }}
 
@@ -14,7 +11,7 @@
 							<div class="card">
 								<div class="card-section">
 									<center>
-										<h4 class="f4">{{ .heading }}</h4>
+										<h4 class="primary">{{ .heading }}</h4>
 										<p>{{ .text }}</p>
 									</center>
 								</div>

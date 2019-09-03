@@ -2,16 +2,12 @@
   <div class="grid-container">
     <div class="grid-x grid-padding-x grid-padding-y align-center">
       <div class="medium-6 cell">
-        <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-        <div class="flex justify-between grey-3">
-          <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-          <p>Read in {{ .ReadingTime }} minutes</p>
-        </div>
-        <div class="cms mw6">
-          <p>{{ .Description }} </p>
-          {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-          {{ .Content }}
-        </div>
+        <h1>{{.Title}}</h1>
+        <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+        <p>Read in {{ .ReadingTime }} minutes</p>
+        <p>{{ .Description }} </p>
+        {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+        {{ .Content }}
       </div>
     </div>
   </div>

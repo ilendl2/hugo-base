@@ -2,7 +2,7 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
-<div class="grid-container">
+<div id="media-block" class="grid-container pad">
   {{ range $index, $element := .Params.values }}
     {{ if modBool $index 2 }}
       {{ partial "media-block" $element }}
