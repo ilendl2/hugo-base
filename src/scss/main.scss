@@ -22,8 +22,9 @@ body {
 .frame-content {
   .bg-grey {background: $light-gray;}
   .bg-off-white{background: $off-white;}
-  .pad {padding: 10px 0;}
+  .pad {padding: 10px;}
   img {max-width: 100%;}
+  .button {padding: 5px 8px;}
 }
 
 #bg-grey {background: $light-gray;}
@@ -34,7 +35,7 @@ body {
 .card {border: 0; padding: 20px; border-radius: 5px; box-shadow: 1px 1px 10px 1px rgba(0,0,0,.21);}
 a {color: $primary;}
 a:hover {color: darken($primary, 10%);}
-.button, button {background: $primary; border-radius: 4px;}
+.button, button {background: $primary; border-radius: 4px; color: $white;}
 .button:hover, button:hover {background: darken($primary, 10%);}
 .primary {color: $primary;}
 
