@@ -6,14 +6,14 @@ import styles from "!to-string-loader!css-loader!postcss-loader!sass-loader!../c
 
 import HomePreview from "./cms-preview-templates/home";
 import PostPreview from "./cms-preview-templates/post";
-import ProductsPreview from "./cms-preview-templates/products";
-import ValuesPreview from "./cms-preview-templates/values";
+import AboutPreview from "./cms-preview-templates/about";
+import BlockPreview from "./cms-preview-templates/block";
 import ContactPreview from "./cms-preview-templates/contact";
 
 CMS.registerPreviewStyle(styles, { raw: true });
 CMS.registerPreviewTemplate("home", HomePreview);
+CMS.registerPreviewTemplate("about", AboutPreview);
 CMS.registerPreviewTemplate("post", PostPreview);
-CMS.registerPreviewTemplate("products", ProductsPreview);
-CMS.registerPreviewTemplate("values", ValuesPreview);
+CMS.registerPreviewTemplate("block", BlockPreview);
 CMS.registerPreviewTemplate("contact", ContactPreview);
 CMS.init();

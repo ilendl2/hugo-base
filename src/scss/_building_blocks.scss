@@ -16,11 +16,12 @@ $hero-height: 40vh;
 
   .hero-section-text {
     color: $white;
-    h1 {text-shadow: 1px 1px 2px $black;}
-    h3 {background: $primary; padding: 5px;}
+    h1 {background: $primary; border-radius: 5px; padding: 5px 10px; text-shadow: 1px 1px 2px $black; font-weight: 600;}
+    h3 {background: $primary; border-radius: 5px; padding: 5px;}
   }
 }
 
 #homepage .hero-section {
    height: 70vh;
+   h1 {background: transparent;}
 }
