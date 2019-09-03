@@ -13,8 +13,6 @@ export default class AboutPreview extends React.Component {
 
     return <div>
       <Jumbotron image={image} title={entry.getIn(["data", "title"])}/>
-      
-      <h2>{ entry.getIn(["data", "title"])}</h2>
       { widgetFor("body") }
     </div>;
   }
