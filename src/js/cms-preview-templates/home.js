@@ -30,7 +30,7 @@ export default class PostPreview extends React.Component {
           { image && <img src={ imageUrl }/> }
           <h2>{entry.getIn(["data", "block", "heading"])}</h2>
           <p>{entry.getIn(["data", "block", "text"])}</p>
-          <a href="{entry.getIn(["data", "block", "button_link"])}">{entry.getIn(["data", "block", "button_text"])}</a>
+          <a>{entry.getIn(["data", "block", "button_text"])}</a>
         </div>
     </div>
   }
