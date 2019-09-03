@@ -3,7 +3,7 @@ import format from "date-fns/format";
 
 import Jumbotron from "./components/jumbotron";
 
-export default class PostPreview extends React.Component {
+export default className PostPreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
     let image = getAsset(entry.getIn(["data", "image"]));
@@ -16,33 +16,49 @@ export default class PostPreview extends React.Component {
     return <div>
         <Jumbotron image={image} title={entry.getIn(["data", "title"])} subtitle={entry.getIn(["data", "subtitle"])}/>
 
-        <div className="bg-off-white pv4">
-          <div className="ph3 mw7 center">
-            <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "intro", "heading"])}</h2>
-            <p className="mb4 mw6">{entry.getIn(["data", "intro", "text"])}</p>
-          </div>
-        </div>
-
-        <div className="bg-grey-1 pv4">
-          <div className="flex-l mhn1-l ph3 center mw7">
-            <h2 className="f2 b lh-title mb2 w-40-l">{entry.getIn(["data", "blurb", "heading"])}</h2>
-            <p className="w-60-l mb0">{entry.getIn(["data", "blurb", "text"])}</p>
-          </div>
-        </div>
-
-        <div className="bg-grey-1 pv4">
-          <div className="ph3 mw7 center">
-            <div className="flex-l mhn2-l">
-              <div className="w-40-l ph2-l">
-                <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "block", "heading"])}</h2>
-                <p>{entry.getIn(["data", "block", "text"])}</p>
-                <a href="{{.buttonLink}}" className="btn raise">Read more</a>
-              </div>
-              <div className="w-60-l ph2-l">
-                <img src="/img/home-about-section.jpg" alt="" className="mb3"/>
+        <div id="bg-grey" className="pad">
+          <div className="grid-container pad">
+            <div className="grid-x grid-padding-x grid-padding-y align-center">
+              <div className="medium-8 cell">
+                <center>
+                  <h2><strong>{entry.getIn(["data", "intro", "heading"])}</strong></h2>
+                  <p>{entry.getIn(["data", "intro", "text"])}</p>
+                </center>
               </div>
             </div>
           </div>
+        </div>
+
+        <div id="bg-off-white" className="pad">
+          <div className="grid-container pad">
+            <div className="grid-x grid-padding-x align-center">
+              <div className="medium-10 cell">
+                <div className="grid-x grid-padding-x align-middle">
+                  <div className="medium-5 cell">
+                    <h2><strong>{entry.getIn(["data", "blurb", "heading"])}</strong></h2>
+                  </div>
+                  <div className="medium-7 cell">
+                    <p>{entry.getIn(["data", "blurb", "text"])}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="bg-grey">
+          <div id="media-block" className="grid-container pad">
+        		<div className="grid-x grid-padding-x grid-padding-y align-middle">
+        			<div className="medium-6 cell">
+        				<img src="img/home-about-section.jpg" alt="">
+        			</div>
+        			<div className="medium-6 cell">
+        				<h2><strong>{entry.getIn(["data", "block", "heading"])}</strong></h2>
+        				<p>{entry.getIn(["data", "block", "text"])}</p>
+        				<a href="{{.buttonLink}}" className="button">Read more</a>
+        			</div>
+        		</div>
+        	</div>
         </div>
     </div>
   }
