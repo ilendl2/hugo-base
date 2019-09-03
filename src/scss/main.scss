@@ -3,7 +3,7 @@
 @import 'building_blocks';
 
 // Colors
-$primary: #3e50b4;
+$primary: #ff4400;
 $secondary: #E91E63;
 $success: #3ADB76;
 $warning: #FF9800;
@@ -32,6 +32,10 @@ body {
 a {color: $primary;}
 a:hover {color: darken($primary, 10%);}
 .primary {color: $primary;}
+
+.top-bar {
+  li a {color: $black; padding: 20px 30px;}
+}
 
 #media-block {
   img {border-radius: 8px;}

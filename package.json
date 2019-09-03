@@ -4,9 +4,6 @@
   "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
   "repository": "netlify/victor-hugo",
   "main": "index.js",
-  "dependencies": {
-    "foundation-sites": "^6.5.3"
-  },
   "scripts": {
     "lint": "eslint src",
     "start": "run-p start:**",
