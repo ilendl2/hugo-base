@@ -7,9 +7,14 @@
 			<div class="medium-12 cell">
 				<div class="grid-x grid-padding-x grid-padding-y medium-up-2">
 					{{ range first 4 (where .Data.Pages "Type" "blog") }}
-						<div class="cell">
-							{{ .Render "li" }}
-						</div>
+            <div class="cell">
+              <div class="card">
+                <h3 class="primary">{{ .Title }}</h3>
+                <p><strong><small>{{ .Date.Format "Mon, Jan 2, 2006" }}</small></strong></p>
+                <p>{{ .Description }}</p>
+                <a href="{{ .RelPermalink }}" class="button">Read more →</a>
+              </div>
+            </div>
 					{{ end }}
 				</div>
 			</div>
